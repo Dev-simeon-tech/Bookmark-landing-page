@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    @font-face {
+        font-family: 'rubik-regular';
+        src: url('./fonts/Rubik/static/Rubik-Regular.ttf');
+    }
+    @font-face {
+        font-family: 'rubik-bold';
+        src: url('./fonts/Rubik/static/Rubik-Bold.ttf');
+    }
+    p{                                  
+        @apply text-Grayish-Blue 
+    }
+
+}
+@layer components{
+    *{
+        @apply font-rubik-regular
+    }
+    .nav-list > li:not(:last-child){
+        @apply p-4 border-t-2 border-Grayish-Blue tracking-widest text-xl lg:border-none lg:p-0
+    }
+    .nav-list li a{
+        @apply lg:text-base text-white lg:text-Very-Dark-Blue
+    }
+    .nav-list li a:hover{
+        @apply text-Soft-Red
+    }
+    .blog{
+        @apply absolute -z-10 right-0 w-[90%] h-5/6 top-14 rounded-l-full lg:top-20
+    }
+    .blog-2{
+        @apply absolute -z-10 left-0 w-[90%] h-[40%] top-[15%] rounded-r-full lg:w-[40%] lg:h-[75%] lg:top-[25%]
+    }
+    .btn{
+        @apply p-4 rounded-md shadow-2xl font-normal lg:border-2 lg:hover:bg-transparent
+    }
+    .btn-nav{
+        @apply lg:text-base lg:hover:bg-transparent lg:border-2 lg:border-Soft-Red lg:hover:text-Soft-Red
+    }
+    .section-header{
+        @apply text-2xl font-rubik-bold text-Very-Dark-Blue
+    }
+    .tab{
+        @apply p-4 relative flex justify-center
+    }
+    .tab::after{
+        @apply content-[''] absolute hidden h-[6px] bg-Soft-Red bottom-0  left-1/2 transform -translate-x-[51%];
+        width: var(--indicator-width);
+    }
+
+    .tab[aria-selected="true"]::after{
+        @apply block
+    }
+    .tab[aria-selected="true"] p,.tab-slide[aria-selected="true"]{
+        @apply text-Very-Dark-Blue
+    }
+    .tab-list-slide::after{
+        @apply content-[''] absolute  h-[4px] bg-Soft-Red bottom-0 transition-all duration-1000 ease-in-out;
+        width: var(--indicator-width);
+        left: var(--indicator-offset);
+    }
+    .tab-slide{
+        @apply text-xl text-Grayish-Blue px-8
+    }
+    .tab-slide:hover{
+        @apply text-Soft-Red
+    }
+    .slide{
+        @apply relative  basis-[100%] shrink-0 flex flex-col items-center justify-center py-2 lg:flex-row lg:justify-between lg:text-left lg:px-12 lg:gap-8
+    }
+    .slide img{
+        @apply min-[1500px]:w-[50%]
+    }
+    .slide p{
+        @apply lg:max-w-[45ch] min-[1500px]:max-w-[70ch]
+    }
+    .slide button{
+        @apply lg:border-Soft-Blue lg:hover:text-Soft-Blue lg:px-6 lg:py-2
+    }
+    .slide > *{
+        @apply w-[90%] lg:w-fit
+    }
+    .card{
+        @apply shadow-xl py-5 rounded-xl lg:relative
+    }
+    .card:nth-child(2){
+        @apply lg:top-8
+    }
+    .card:nth-child(3){
+        @apply lg:top-16
+    }
+    .card button{
+        @apply lg:border-Soft-Blue lg:hover:text-Soft-Blue
+    }
+    .card img:first-of-type{
+        @apply mx-auto
+    }
+    .card > .details{
+        @apply py-5
+    }
+    .card h3{
+        @apply text-2xl font-rubik-bold text-Very-Dark-Blue
+    }
+    .faq{
+        @apply border-b-2
+    }
+    .faq .question:hover p{
+        @apply text-Soft-Red
+    }
+    .faq[aria-selected="true"] .answer{
+        @apply max-h-full 
+    }
+    .faq[aria-selected="true"] .question > img{
+        @apply transform rotate-180
+    }
+    .input-box.error{
+        @apply bg-Soft-Red p-1 rounded-md  
+    }
+    .input-box.error.error p,.input-box.error img{
+        @apply block
+    }
+    .accordion > *{
+        @apply lg:w-1/2 lg:cursor-pointer
+    }
+    .footer-nav a{
+        @apply lg:hover:text-Soft-Red
+    }
+        
+}
+@media(max-width:1023px){
+    #primary-navigation[aria-expanded='true']{
+        @apply block bg-Nav-blue w-full h-screen inset-0  z-10
+    }
+    .btn-nav{
+        @apply w-full border-[3px] border-white tracking-widest rounded p-3 text-white 
+    }
+}
