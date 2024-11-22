@@ -33,7 +33,7 @@
         @apply absolute -z-10 right-0 w-[90%] h-5/6 top-14 rounded-l-full lg:top-20
     }
     .blog-2{
-        @apply absolute -z-10 left-0 w-[90%] h-[40%] top-[15%] rounded-r-full lg:w-[40%] lg:h-[75%] lg:top-[25%]
+        @apply absolute -z-10 left-0 w-[90%] h-[40%] top-[15%] rounded-r-full lg:w-[40%] lg:h-[50%] lg:top-[25%]
     }
     .btn{
         @apply p-4 rounded-md shadow-2xl font-normal lg:border-2 lg:hover:bg-transparent
@@ -70,7 +70,7 @@
         @apply text-Soft-Red
     }
     .slide{
-        @apply relative  basis-[100%] shrink-0 flex flex-col items-center justify-center py-2 lg:flex-row lg:justify-between lg:text-left lg:px-12 lg:gap-8
+        @apply absolute w-full flex flex-col items-center justify-center p-4 lg:flex-row lg:justify-between lg:text-left lg:px-12 lg:gap-8 
     }
     .slide img{
         @apply min-[1500px]:w-[50%]
@@ -81,9 +81,9 @@
     .slide button{
         @apply lg:border-Soft-Blue lg:hover:text-Soft-Blue lg:px-6 lg:py-2
     }
-    .slide > *{
+    /* .slide > *{
         @apply w-[90%] lg:w-fit
-    }
+    } */
     .card{
         @apply shadow-xl py-5 rounded-xl lg:relative
     }

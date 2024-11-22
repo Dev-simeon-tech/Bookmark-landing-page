@@ -2,6 +2,15 @@ const tabList = document.querySelector('.tab-list')
 const tabs = document.querySelectorAll('.tab')
 const slides = document.querySelectorAll('.slide')
 const slideContainer = document.querySelector('.slide-container')
+
+const slideSize = slides[0].getBoundingClientRect();
+const slideWidth = slideSize.width
+
+
+slides.forEach( (slide,index)=>{
+    slide.style.left = `${slideWidth * index}px`;
+})
+
 tabs.forEach((tab,index)=>{
     tab.addEventListener('click',(e)=>{
         updateActiveTab(tab);
@@ -26,12 +35,8 @@ function updateActiveTab(tab){
    
 }
 
-const slideSize = slides[0].getBoundingClientRect();
-const slideWidth = slideSize.width
-
 
 function updateSlide(tabIndex){
-    // const offset = targetSlide.getBoundingClientRect()
     slideContainer.style.transform = `translate(-${(slideWidth * tabIndex)}px)`
 
 }

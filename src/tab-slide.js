@@ -8,7 +8,7 @@ tabSlide.forEach( (tab,index) => {
     })
     
 });
-// console.log(tabSlide)
+
 function changeActiveTab(tab){
     const currentab = tabSlideCont.querySelector('[aria-selected = "true"]')
     const targetTab = tab
