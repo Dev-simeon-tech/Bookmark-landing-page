@@ -33,7 +33,7 @@
         @apply absolute -z-10 right-0 w-[90%] h-5/6 top-14 rounded-l-full lg:top-20
     }
     .blog-2{
-        @apply absolute -z-10 left-0 w-[90%] h-[40%] top-[15%] rounded-r-full lg:w-[40%] lg:h-[50%] lg:top-[25%]
+        @apply absolute -z-10 left-0 w-[90%] h-[40%] top-[15%] rounded-r-full lg:w-[35%] lg:h-[55%] lg:top-[25%]
     }
     .btn{
         @apply p-4 rounded-md shadow-2xl font-normal lg:border-2 lg:hover:bg-transparent
